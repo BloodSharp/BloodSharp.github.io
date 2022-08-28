@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://bloodsharp.github.io/UPEIM/frontend/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Frontend - Desafío UPEIM</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Frontend";
+        var mkdocs_page_input_path = "frontend.md";
+        var mkdocs_page_url = "/UPEIM/frontend/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Desafío UPEIM
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Inicio</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../backend/">Backend</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../database/">Base de datos</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Frontend</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#dependencias">Dependencias</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#instalacion-de-dependencias">Instalación de dependencias</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#iniciar-construir-y-pruebas-unitarias-el-frontend">Iniciar, construir y pruebas unitarias el frontend</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#importante">Importante</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#entorno-de-desarrollo-en-vivo">Entorno de desarrollo en vivo</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#construir-el-proyecto">Construir el proyecto</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pruebas-del-proyecto">Pruebas del proyecto</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../documentation/">Documentación de esta página</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Desafío UPEIM</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Frontend</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="frontend">Frontend</h1>
+<h2 id="dependencias">Dependencias</h2>
+<p>La siguiente es una lista de dependencias requeridas por el servidor:</p>
+<ul>
+<li><strong>@testing-library/jest-dom</strong> versión 5.16.5</li>
+<li><strong>@testing-library/react</strong> versión 13.3.0</li>
+<li><strong>@testing-library/user-event</strong> versión 13.5.0</li>
+<li><strong>bootstrap</strong> versión 5.2.0</li>
+<li><strong>react</strong> versión 18.2.0</li>
+<li><strong>react-bootstrap</strong> versión 2.5.0</li>
+<li><strong>react-dom</strong> versión 18.2.0</li>
+<li><strong>react-hot-toast</strong> versión 2.3.0</li>
+<li><strong>react-router-dom</strong> versión 6.3.0</li>
+<li><strong>react-scripts</strong> versión 5.0.1</li>
+<li><strong>web-vitals</strong> versión 2.1.4</li>
+</ul>
+<h3 id="instalacion-de-dependencias">Instalación de dependencias</h3>
+<p>Ingresar a la terminal en la carpeta frontend y luego ingresar el siguiente comando:</p>
+<pre><code class="language-bash">npm install
+</code></pre>
+<h2 id="iniciar-construir-y-pruebas-unitarias-el-frontend">Iniciar, construir y pruebas unitarias el frontend</h2>
+<h3 id="importante"><code>Importante</code></h3>
+<p>Recuerde primero iniciar el backend antes de realizar el entorno de desarrollo en vivo y/o construir y utilizar un servidor local en su computadora.</p>
+<h3 id="entorno-de-desarrollo-en-vivo">Entorno de desarrollo en vivo</h3>
+<p>Para probar el frontend primero debe ingresar a la terminal en la carpeta frontend y finalmente ingresar el siguiente comando:</p>
+<pre><code class="language-bash">npm start
+</code></pre>
+<h3 id="construir-el-proyecto">Construir el proyecto</h3>
+<p>Para construir el frontend primero debe ingresar a la terminal en la carpeta frontend y finalmente ingresar el siguiente comando:</p>
+<pre><code class="language-bash">npm run build
+</code></pre>
+<h3 id="pruebas-del-proyecto">Pruebas del proyecto</h3>
+<p>Para probar el frontend primero debe ingresar a la terminal en la carpeta frontend y finalmente ingresar el siguiente comando:</p>
+<pre><code class="language-bash">npm test
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../database/" class="btn btn-neutral float-left" title="Base de datos"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../documentation/" class="btn btn-neutral float-right" title="Documentación de esta página">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../database/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../documentation/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

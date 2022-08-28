@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" /><link rel="canonical" href="https://bloodsharp.github.io/UPEIM/" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Desafío UPEIM</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Inicio";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = "/UPEIM/";
+      </script>
+    
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> Desafío UPEIM
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href=".">Inicio</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#enlaces-de-navegacion-de-la-documentacion">Enlaces de navegación de la documentación</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#instrucciones-del-desafio">Instrucciones del desafío</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#repositorio">Repositorio</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#backend">Backend</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#base-de-datos">Base de datos</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#frontend">Frontend</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#testeo-automatico">Testeo automático</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="backend/">Backend</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="database/">Base de datos</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="frontend/">Frontend</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="documentation/">Documentación de esta página</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">Desafío UPEIM</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Inicio</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="desafio-upeim">Desafío UPEIM</h1>
+<p>Este es el sitio web de la documentación del desafío para ingreso a la Unidad de Proyectos Especiales Gestión de Infraestructura de la Movilidad del gobierno de la ciudad de Buenos Aires.</p>
+<h2 id="enlaces-de-navegacion-de-la-documentacion">Enlaces de navegación de la documentación</h2>
+<ul>
+<li>Ver la documentación para el <a href="backend/">backend</a> (Servidor).</li>
+<li>Ver la documentación para la <a href="database/">base de datos</a>.</li>
+<li>Ver la documentación para el <a href="frontend/">frontend</a> (Página web).</li>
+<li>Ver la documentación para <a href="documentation/">mkdocs</a> (Documentación de esta página web).</li>
+</ul>
+<h2 id="instrucciones-del-desafio">Instrucciones del desafío</h2>
+<h3 id="repositorio">Repositorio</h3>
+<p>Todo el código deberá estar guardado en algún repositorio GIT (teniendo en cuenta buenas
+prácticas) junto a la documentación del proyecto. Suma la realización de una estimación en
+horas de cada tarea.
+Recordar indicar que paquetes se utilizaron y todos los pasos necesarios para ejecutar
+correctamente la aplicación.</p>
+<h3 id="backend">Backend</h3>
+<p>Desarrollar un servidor donde se exponga una API REST que permita en formato JSON dar
+una alta, baja, realizar una modificación y traer el listado de empleados.
+Cada empleado deberá tener:</p>
+<ul>
+<li>Nombre Completo</li>
+<li>Documento de identidad</li>
+<li>Fecha de nacimiento</li>
+<li>Si es o no desarrollador</li>
+<li>Una breve descripción</li>
+<li>Área a la que pertenece
+  Recuerda documentar cada endpoint que desarrolles.</li>
+</ul>
+<h3 id="base-de-datos">Base de datos</h3>
+<p>Los datos deberán ser almacenados en una base de datos, indicando en la documentación
+el porqué de la elección de la base de datos, el DER (Diagrama de Entidad Relación), y las
+consultas SQL para realizar cada acción y creación de la base.</p>
+<p><strong>Nota</strong>: Las áreas deberán estar en una tabla aparte.</p>
+<h3 id="frontend">Frontend</h3>
+<p>Desarrollar una página web la cual tenga un formulario de alta de empleados, y otra donde
+están listados todos los empleados que fueron dados de alta, preferentemente utilizando
+algún framework moderno (Angular, Vue ó React)</p>
+<h3 id="testeo-automatico">Testeo automático</h3>
+<p>Utilizar alguna librería moderna para realizar pruebas unitarias y/o funcionales de todo el
+código desarrollado.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="backend/" class="btn btn-neutral float-right" title="Backend">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+      <span><a href="backend/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme_extra.js" defer></script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.3.1
+Build Date UTC : 2022-08-28 15:19:41.178641+00:00
+-->

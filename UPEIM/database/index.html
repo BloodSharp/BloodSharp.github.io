@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://bloodsharp.github.io/UPEIM/database/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Base de datos - Desafío UPEIM</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Base de datos";
+        var mkdocs_page_input_path = "database.md";
+        var mkdocs_page_url = "/UPEIM/database/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Desafío UPEIM
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Inicio</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../backend/">Backend</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Base de datos</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#eleccion-de-base-de-datos">Elección de base de datos</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#diagrama-entidad-relacion">Diagrama Entidad Relación</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#consultas-sql">Consultas SQL</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#creacion-de-la-base-de-datos">Creación de la base de datos</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#obtener-datos-de-los-empleados-de-la-base-de-datos">Obtener datos de los empleados de la base de datos</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#modificar-de-los-empleados-la-base-de-datos">Modificar de los empleados la base de datos</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#area-de-empleados">Área de empleados</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../frontend/">Frontend</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../documentation/">Documentación de esta página</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Desafío UPEIM</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Base de datos</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="base-de-datos">Base de datos</h1>
+<h2 id="eleccion-de-base-de-datos">Elección de base de datos</h2>
+<p>Se ha elegido el tipo de base de datos sqlite3 por su sencillez para proyectos pequeños como este. Para proyectos donde se requiere por lo general mucho almacenamiento escogería MariaDB.</p>
+<h2 id="diagrama-entidad-relacion">Diagrama Entidad Relación</h2>
+<p>Se ha creado dos tablas según lo requerido, una para los empleados y la segunda tabla para el área del sector que pertenece el empleado. En ambos casos las columnas id son <strong>Primary key</strong>, la columna <strong>esDesarrollador</strong> es de tipo entero debido a que sqlite3 soporta booleanos a través de valores enteros. En la tabla empleados la columna <strong>areaId</strong> es una <strong>Foreign key</strong> relacionada con el <strong>id</strong> de la tabla oficina.</p>
+<p><img alt="Imagen del Diagrama" src="../img/DER.png" /></p>
+<h2 id="consultas-sql">Consultas SQL</h2>
+<h3 id="creacion-de-la-base-de-datos">Creación de la base de datos</h3>
+<pre><code class="language-SQL">CREATE TABLE &quot;empleados&quot; (
+    &quot;id&quot;    INTEGER NOT NULL UNIQUE,
+    &quot;nombreCompleto&quot;    TEXT NOT NULL,
+    &quot;documentoIdentidad&quot; INTEGER NOT NULL UNIQUE,
+    &quot;fechaNacimiento&quot;   INTEGER NOT NULL,
+    &quot;esDesarrollador&quot;   INTEGER NOT NULL,
+    &quot;descripcion&quot;   TEXT NOT NULL,
+    &quot;areaId&quot;    INTEGER NOT NULL,
+    FOREIGN KEY(&quot;areaId&quot;) REFERENCES &quot;oficina&quot;(&quot;id&quot;),
+    PRIMARY KEY(&quot;id&quot; AUTOINCREMENT)
+);
+</code></pre>
+<pre><code class="language-SQL">CREATE TABLE &quot;oficina&quot; (
+    &quot;id&quot;    INTEGER NOT NULL UNIQUE,
+    &quot;area&quot;  TEXT NOT NULL,
+    PRIMARY KEY(&quot;id&quot; AUTOINCREMENT)
+);
+</code></pre>
+<h3 id="obtener-datos-de-los-empleados-de-la-base-de-datos">Obtener datos de los empleados de la base de datos</h3>
+<p>La siguiente instrucción obtiene todos los empleados y el área a la cual pertenece.</p>
+<pre><code class="language-SQL">SELECT
+    empleados.id, empleados.nombreCompleto, empleados.documentoIdentidad,
+    empleados.fechaNacimiento, empleados.esDesarrollador,
+    empleados.descripcion, oficina.areaFROM empleados
+    INNER JOIN oficina WHERE empleados.areaId = oficina.id
+</code></pre>
+<p>La siguiente instrucción obtiene todos los empleados y el área a la cual pertenece filtrando por su nombre.</p>
+<pre><code class="language-SQL">SELECT
+    empleados.id, empleados.nombreCompleto, empleados.documentoIdentidad,
+    empleados.fechaNacimiento, empleados.esDesarrollador,
+    empleados.descripcion, oficina.area
+    FROM empleados INNER JOIN oficina
+    WHERE empleados.nombreCompleto like '%Nombre a buscar%'
+    AND empleados.areaId = oficina.id
+</code></pre>
+<h3 id="modificar-de-los-empleados-la-base-de-datos">Modificar de los empleados la base de datos</h3>
+<p>La siguiente instrucción de ejemplo agrega un empleado a la base de datos.</p>
+<pre><code class="language-SQL">INSERT INTO &quot;empleados&quot;
+    (&quot;nombreCompleto&quot;, &quot;documentoIdentidad&quot;, &quot;fechaNacimiento&quot;,
+    &quot;esDesarrollador&quot;, &quot;descripcion&quot;, &quot;areaId&quot;)
+    VALUES ('Agustín dos Santos', 123456789, 19920714,
+    'TRUE', 'Desarrollador frontend', 1);
+</code></pre>
+<p>La siguiente instrucción de ejemplo modifica un empleado mediante su número de identificación de la base de datos.</p>
+<pre><code class="language-SQL">UPDATE &quot;empleados&quot; SET
+      &quot;nombreCompleto&quot; = &quot;Federico dos Santos&quot;,
+      &quot;documentoIdentidad&quot; = '987654321',
+      &quot;fechaNacimiento&quot; = '19960906',
+      &quot;esDesarrollador&quot; = 'FALSE',
+      &quot;descripcion&quot; = &quot;DataEntry&quot;,
+      &quot;areaId&quot; = '1'
+      WHERE empleados.id = 1
+</code></pre>
+<p>La siguiente instrucción de ejemplo elimina un empleado mediante su número de identificación de la base de datos.</p>
+<pre><code class="language-SQL">DELETE FROM &quot;empleados&quot; WHERE id = 1;
+</code></pre>
+<h3 id="area-de-empleados">Área de empleados</h3>
+<p>La siguiente instrucción de ejemplo obtiene la identifiación y el nombre todas las áreas disponible de la base de datos.</p>
+<pre><code class="language-SQL">SELECT * FROM &quot;oficina&quot;
+</code></pre>
+<p>La siguiente instrucción de ejemplo añade un área a la tabla oficina de la base de datos.</p>
+<pre><code class="language-SQL">INSERT INTO oficina(&quot;area&quot;) VALUES ('SS. Gestión de la movilidad')
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../backend/" class="btn btn-neutral float-left" title="Backend"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../frontend/" class="btn btn-neutral float-right" title="Frontend">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../backend/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../frontend/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
