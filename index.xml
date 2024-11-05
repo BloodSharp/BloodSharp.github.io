@@ -4,17 +4,16 @@
     <title>BloodSharp</title>
     <link>https://bloodsharp.github.io/</link>
     <description>Recent content on BloodSharp</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://bloodsharp.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Dec 2021 22:16:41 -0300</lastBuildDate>
+    <atom:link href="https://bloodsharp.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Agustín</title>
       <link>https://bloodsharp.github.io/about/</link>
       <pubDate>Mon, 27 Dec 2021 22:16:41 -0300</pubDate>
-      
       <guid>https://bloodsharp.github.io/about/</guid>
-      <description>Who am I? Hello my name is Agustín, I&amp;rsquo;m a senior software developer with reverse engineering skills and graphics designer.
-Skills  Sofware development (C++, Golang, C#, Java and many other languages) Reverse engineering (IDA Pro, Ghidra, x64dbg) Graphics designer (Photoshop, Illustrator, Blender, After-Effects)  </description>
+      <description>&lt;h1 id=&#34;who-am-i&#34;&gt;Who am I?&lt;/h1&gt;&#xA;&lt;p&gt;Hello my name is Agustín, I&amp;rsquo;m a senior software developer with reverse engineering and few audiovisual skills.&lt;/p&gt;&#xA;&lt;h1 id=&#34;skills&#34;&gt;Skills&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Sofware development (C++, Golang, C#, TypeScript using Angular and NestJS)&lt;/li&gt;&#xA;&lt;li&gt;Reverse engineering (IDA Pro, Ghidra, x64dbg)&lt;/li&gt;&#xA;&lt;li&gt;Graphics designer (Photoshop, Illustrator, Blender, After-Effects)&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
-    
   </channel>
 </rss>
